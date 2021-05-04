@@ -1,3 +1,12 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+##index:
+##    path: /
+##    controller: App\Controller\DefaultController::index
+#
+#NelmioApiDocBundle:
+#  resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+#  prefix:    /api/doc
+#
+#sonata_api_media:
+#  type:     rest
+#  prefix:    /api
+#  resource: "@SonataMediaBundle/Resources/config/routing/api.xml"

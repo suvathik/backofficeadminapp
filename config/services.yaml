@@ -45,3 +45,5 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Order }
 
+#sensio_framework_extra.view.listener:
+#    alias: Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener

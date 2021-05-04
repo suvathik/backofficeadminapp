@@ -9,6 +9,8 @@ use App\Form\AdminLoginForm;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\HttpFoundation\Response;
+//use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+//use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 final class AdminLoginController extends Controller
 {
@@ -27,6 +29,10 @@ final class AdminLoginController extends Controller
      */
     public function loginAction(): Response
     {
+//        var_dump($this->denyAccessUnlessGranted('ROLE_EMPLOYEE', null, 'User tried to access a page without having ROLE_ADMIN'));
+//        exit;
+
+
         $form = $this->createForm(AdminLoginForm::class, [
             'email' => $this->authenticationUtils->getLastUsername()
         ]);

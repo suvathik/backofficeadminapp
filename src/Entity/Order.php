@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="order")
+ * @ORM\Table(name="order_backoffice")
  */
 class Order
 {
@@ -24,7 +24,7 @@ class Order
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string")
+     * @ORM\Column(name="employee", type="string")
      */
     private $employee;
 
@@ -45,7 +45,7 @@ class Order
     /**
      * @var string
      *
-     * @ORM\Column(name="notes", type="text"),nullable = true
+     * @ORM\Column(name="notes", type="text")
      */
     private $notes;
 

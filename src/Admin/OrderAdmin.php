@@ -13,7 +13,7 @@ final class OrderAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper->add('user', TextType::class);
+//        $formMapper->add('user', TextType::class);
         $formMapper->add('employee', TextType::class);
         $formMapper->add('product', TextType::class);
         $formMapper->add('price', TextType::class);
@@ -22,7 +22,7 @@ final class OrderAdmin extends AbstractAdmin
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper->add('user');
+//        $datagridMapper->add('user');
         $datagridMapper->add('employee');
         $datagridMapper->add('product');
         $datagridMapper->add('price');
@@ -31,10 +31,20 @@ final class OrderAdmin extends AbstractAdmin
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        $listMapper->addIdentifier('user');
+//        $listMapper->addIdentifier('user');
         $listMapper->addIdentifier('employee');
         $listMapper->addIdentifier('product');
         $listMapper->addIdentifier('price');
         $listMapper->addIdentifier('notes');
+
+
+        $listMapper
+            ->add('_action', 'actions', array(
+                'actions' => array(
+                    'edit' => array(),
+                    'delete' => array(),
+                )
+            ))
+        ;
     }
 }

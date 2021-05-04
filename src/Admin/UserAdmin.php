@@ -39,5 +39,14 @@ final class UserAdmin extends AbstractAdmin
         $listMapper->addIdentifier('email');
         $listMapper->addIdentifier('password');
         $listMapper->addIdentifier('roles');
+
+        $listMapper
+            ->add('_action', 'actions', array(
+                'actions' => array(
+                    'edit' => array(),
+                    'delete' => array(),
+                )
+            ))
+        ;
     }
 }
